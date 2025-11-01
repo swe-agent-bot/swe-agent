@@ -101,6 +101,8 @@ Install the swe-agent GitHub App in your target repository to grant access.
 
 ### Step 3: Top Up Balance
 
+> Currently, payments can only be made via WeChat or Alipay. Please contact support@stellarlink.co for further information.
+
 Log in to the [Dashboard](https://swe-agent.ai/dashboard) and make your first deposit.
 
 1. Visit the dashboard and log in with your GitHub account
@@ -180,7 +182,7 @@ Monitor task execution through:
 A: Log in to the dashboard to see your current balance at the top.
 
 **Q: What happens if balance is insufficient?**
-A: New tasks cannot execute when balance is below $10. Top up first.
+A: New tasks cannot execute when balance is below $2. Top up first.
 
 **Q: How long until top-up is credited?**
 A: Real-time crediting after payment, usually within 10 seconds.
