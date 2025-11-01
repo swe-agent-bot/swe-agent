@@ -202,7 +202,7 @@ A: Contact admin via support@stellarlink.co to request addition.
 ### Usage
 
 **Q: Can multiple tasks execute simultaneously?**
-A: Yes, supports concurrent Issue processing. Ensure sufficient balance (each task pre-authorizes $10).
+A: Yes, supports concurrent Issue processing. Ensure sufficient balance (each task pre-authorizes $2).
 
 **Q: How to cancel a running task?**
 A: Cancellation mid-execution is not currently supported, but task status can be viewed in dashboard. Contact support for forced stop.
@@ -324,4 +324,5 @@ We welcome your feedback and suggestions:
 [Visit Dashboard](https://swe-agent.ai/dashboard) | [View Demo](https://github.com/cexll/myclaude/issues/17)
 
 </div>
+
 
