@@ -56,11 +56,11 @@ SWE-Agent Cloud Service uses a **pay-as-you-go** model—you only pay for actual
 
 | Item | Price |
 |------|-------|
-| **Minimum Top-up** | $10 USD (~¥73 CNY) |
-| **Exchange Rate** | 1 USD = 7.3 CNY (fixed) |
+| **Minimum Top-up** | $10 USD (~¥13 CNY) |
+| **Exchange Rate** | 1 USD = 1.3 CNY (fixed) |
 | **Validity** | No expiration during beta |
 
-> 💡 CNY payments are converted to USD balance at a fixed rate of 7.3. All charges are settled in USD.
+> 💡 CNY payments are converted to USD balance at a fixed rate of 1.3. All charges are settled in USD.
 
 ### Typical Task Cost Estimates
 
@@ -114,29 +114,40 @@ Log in to the [Dashboard](https://swe-agent.ai/dashboard) and make your first de
 Comment `/code` in any Issue or PR with your task description.
 
 **Command Format**:
-```
+
+```bash
 /code <task description>
+/code --plan <task description>  # Enable plan mode
 ```
+
+**Parameters**:
+- **Default Mode**: Directly execute task, generate code and submit PR
+- **`--plan` Mode**: Generate detailed implementation plan first, wait for your confirmation before execution
+  - Suitable for complex tasks or when implementation approach is unclear
+  - AI will analyze requirements, list implementation steps, assess risks
+  - You can suggest modifications to the plan before execution
 
 **Examples**:
 
-1. **Fix Bug**:
-   ```
+1. **Fix Bug** (direct execution):
+   ```bash
    /code Fix login button styling issue, ensure proper display on mobile
    ```
 
-2. **Add Feature**:
+2. **Add Feature** (plan mode):
+   ```bash
+   /code --plan Add email verification for user table, including email sending and validation logic
    ```
-   /code Add email verification for user table, including email sending and validation logic
-   ```
+   > Use `--plan` for complex features—AI will present implementation approach for your review
 
-3. **Code Refactoring**:
+3. **Code Refactoring** (plan mode):
+   ```bash
+   /code --plan Extract authentication logic from UserService into a separate AuthService
    ```
-   /code Extract authentication logic from UserService into a separate AuthService
-   ```
+   > Refactoring tasks should use plan mode to avoid breaking existing functionality
 
-4. **Update Documentation**:
-   ```
+4. **Update Documentation** (direct execution):
+   ```bash
    /code Update README with new API endpoint documentation
    ```
 
@@ -265,6 +276,30 @@ If task involves specific design patterns or libraries, mention in description.
 
 Use `/code` in existing PR comments—AI will automatically update that PR, avoiding duplicate branches.
 
+### 5. Use Plan Mode Wisely
+
+**When to use `--plan`**:
+- ✅ Complex feature development (involves multiple files or modules)
+- ✅ Code refactoring (need to assess impact scope)
+- ✅ Unclear implementation approach (want to review plan first)
+- ✅ Critical system changes (requires careful review)
+
+**When to execute directly**:
+- ✅ Simple bug fixes
+- ✅ Documentation updates
+- ✅ Configuration file adjustments
+- ✅ Minor styling changes
+
+**Example Comparison**:
+
+```bash
+# Simple task - direct execution
+/code Fix button click unresponsive issue
+
+# Complex task - use plan mode
+/code --plan Refactor user authentication flow to support multi-factor authentication (MFA)
+```
+
 ## Support & Feedback
 
 ### Contact
@@ -289,3 +324,4 @@ We welcome your feedback and suggestions:
 [Visit Dashboard](https://swe-agent.ai/dashboard) | [View Demo](https://github.com/cexll/myclaude/issues/17)
 
 </div>
+
